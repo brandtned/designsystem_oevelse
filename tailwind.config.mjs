@@ -114,27 +114,38 @@ export default {
           },
 
         /* Tilføj dit fontvægt-hierarki nedenfor */
-        //   fontWeight: {
-        //     regular: '400',
-        //   },
+          fontWeight: {
+            light: '300',
+            regular: '400',
+            semibold: '600',
+          },
 
         /* Borders - borderstørrelser herunder */
-        // borderWidth: {
-        //     DEFAULT: '1px',
-        //     0: '0px',
-        //     2: '2px',
-        // },
+        borderWidth: {
+            DEFAULT: '1px',
+            0: '0px',
+            2: '2px',
+            3: '3px',
+            4: '4px',
+        },
 
         /* Border radius størrelser herunder */
-        // borderRadius: {
-        //     DEFAULT: '1.25rem',
-        //     none: '0px',
-        // },
+        borderRadius: {
+            DEFAULT: '20px',
+            none: '0px',
+            sm: '10px',
+            md: '30px',
+            lg: '40px',
+            full: '9999px',
+        },
 
         /* Box shadows herunder */
-        // boxShadow: {
-        //     drop25: '4px 4px 4px 0 rgb(0 0 0 / 0.25)', /* x y blur spread farve / opacity */  
-        // },
+        boxShadow: {
+            drop25: '4px 4px 4px 0 rgb(0 0 0 / 0.25)', /* x y blur spread farve / opacity */
+        drop50: "4px 4px 4px 9 rgb(0 0 0 / 0.50)",
+        inner25: "0px 4px 4px 0 rgb(0 0 0 / 0.25)",
+        inner50: "0px 4px 4px 0 rgb(0 0 0 / 0.50)",  
+        },
 
 		extend: {
         },
