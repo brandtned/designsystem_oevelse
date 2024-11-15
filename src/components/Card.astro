@@ -1,0 +1,47 @@
+---
+
+const { url="#", cardimage="", cardimagealt="", 
+
+badgenyt="false", badgerabat="false", badgerabatsats="", badgefaapladser="false", 
+
+holdnavn="", tidspunkt="", aldersgruppe="", niveau="", pladserpaaholdet="", lokale="", holdbeskrivelse="", 
+
+underviserfoto="", underviserfotoalt="", undervisernavn="", underviserinfo="" } = Astro.props; 
+
+---
+
+<article class="card border-blue-500 border-2 @container">
+    <a href="#" class="flex flex-col justify-between h-full">
+        <header class="danseholdheader mb-xs relative">
+            <img src={cardimage} alt={cardimagealt} class="object-cover h-9xl w-full bg-red-200">
+            {(badgenyt === "true") && <div class="badge absolute top-xs bg-blue-500 p-xs text-white">Nyt hold!</div>}
+            {(badgerabat === "true") && <div class="badge absolute top-xs bg-red-500 p-xs right-[0] text-white">10% rabat!</div>}
+            {(badgefaapladser === "true") && <div class="badge absolute bottom-xs bg-yellow-500 right-[0] text-black p-xs">Kun få pladser tilbage!</div>}
+        </header>
+
+        <section class="holdinfo p-xs grow border-b-2 border-blue-500">
+            <h3 class="text-small @lg:text-large mb-xs">{holdnavn}</h3>
+            <div class="flex flex-col @md:flex-row @md:justify-between mb-xs">
+                <div class="venstre grow">
+                    <div><span>Tid:</span><span>{tidspunkt}</span></div>
+                    <div><span>Alder:</span><span>{aldersgruppe}</span></div>
+                    <div><span>Niveau:</span><span>{niveau}</span></div>
+                </div>
+                <div class="hoejre grow">
+                    <div><span>Deltagere:</span><span>{pladserpaaholdet}</span></div>
+                    <div><span>Lokale:</span><span>{lokale}</span></div>
+                </div>
+            </div>
+            <p class="mb-xs">{holdbeskrivelse}</p>
+
+        <section class="undervinserinfo flex my-xs gap-xs p-xs border-t-2 border-gray-200">
+            <div class="flex-none">
+                <img src={underviserfoto} alt={underviserfotoalt} class="object-cover h-xl w-xl rounded-full" />
+            </div>
+            <div>
+                <p class="font-bold">{undervisernavn}</p>
+                <p>{underviserinfo}</p>
+            </div>
+        </section>
+    </a>
+</article>
